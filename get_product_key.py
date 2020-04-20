@@ -68,7 +68,7 @@ if __name__ == "__main__":
 	elif proc_arch == 'x86' or proc_arch == 'amd64':
 		arch_keys = {winreg.KEY_WOW64_32KEY, winreg.KEY_WOW64_64KEY}
 	else:
-		sys.exit("[-] Unhandled arch: {proc_arch}")
+		sys.exit(f"[-] Unhandled arch: {proc_arch}")
 
 	# Get DigitalProductId
 	k, v = get_value(TARGET_KEY, TARGET_VALUE, arch_keys)
